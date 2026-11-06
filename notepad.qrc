@@ -14,7 +14,6 @@
         <file>img/goto.png</file>
         <file>img/line_number.png</file>
         <file>img/paste.png</file>
-        <file>img/重做.png</file>
         <file>img/statusbar.png</file>
         <file>img/word_wrap.png</file>
         <file>img/font_setting.png</file>
@@ -22,5 +21,6 @@
         <file>img/select_all.png</file>
         <file>img/exit.png</file>
         <file>img/redo.png</file>
+        <file>img/notebook.png</file>
     </qresource>
 </RCC>
