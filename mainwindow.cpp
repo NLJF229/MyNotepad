@@ -174,6 +174,9 @@ void MainWindow::on_textEdit_textChanged()
         this->setWindowTitle("*" + this->windowTitle());
         textChanged = true;
     }
+
+    statusLabel.setText("length: " + QString::number(ui->textEdit->toPlainText().length()) +
+                        "   lines: " + QString::number(ui->textEdit->document()->lineCount()));
 }
 
 bool MainWindow::userEditConfirmed()
@@ -332,3 +335,10 @@ void MainWindow::on_actionExit_triggered()
         exit(0);
 }
 
+void MainWindow::on_textEdit_cursorPositionChanged()
+{
+    QTextCursor cur = ui->textEdit->textCursor();
+    int line = cur.blockNumber() + 1;
+    int col  = cur.columnNumber() + 1;
+    statusCursorLabel.setText(QString("Ln: %1   Col: %2").arg(line).arg(col));
+}
